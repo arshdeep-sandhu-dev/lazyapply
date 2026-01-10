@@ -5,8 +5,8 @@ export default function GradientGlow() {
     <div aria-hidden style={{ position: 'fixed', inset: 0, zIndex: -1, overflow: 'hidden' }}>
       <div style={{
         position: 'absolute',
-        width: 1100,
-        height: 1100,
+        width: 550,
+        height: 550,
         left: -200,
         top: -200,
         background: 'radial-gradient(circle at 30% 30%, rgba(56,189,248,0.40), transparent 60%)',
@@ -18,7 +18,7 @@ export default function GradientGlow() {
         height: 700,
         right: -250,
         bottom: -250,
-        background: 'radial-gradient(circle at 70% 70%, rgba(34,197,94,0.30), transparent 60%)',
+        background: 'radial-gradient(circle at 70% 70%, rgba(78, 78, 78, 0.3), transparent 30%)',
         filter: 'blur(20px)'
       }} />
       <div style={{

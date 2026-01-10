@@ -4,8 +4,8 @@ import { profile } from '../data/profile'
 
 export default function Footer() {
   return (
-    <Box sx={{ mt: 10, py: 6, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-      <Container maxWidth="lg">
+    <Box sx={{ mt: 10, py: 6, borderTop: 1, borderColor: 'text.primary' }}>
+      <Container maxWidth="32rem">
         <Typography sx={{ opacity: 0.8 }}>
           © {new Date().getFullYear()} {profile.name}. Built with React + MUI.
         </Typography>

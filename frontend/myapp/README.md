@@ -1,3 +1,27 @@
+# Firebase Authentication
+.env.local
+Register app
+https://console.firebase.google.com/u/0/
+
+REACT_APP_FIREBASE_API_KEY=TODO
+REACT_APP_FIREBASE_AUTH_DOMAIN=TODO
+REACT_APP_FIREBASE_PROJECT_ID=TODO
+REACT_APP_FIREBASE_STORAGE_BUCKET=TODO
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=TODO
+REACT_APP_FIREBASE_APP_ID=TODO
+REACT_APP_FIREBASE_MEASUREMENT_ID=TODO
+
+# Where login redirects to
+under frontend/myapp/src/containers/LoginContainer.js and RegisterContainer.js, replace the hardcoded redirect paths with MAINPAGE constant.
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
