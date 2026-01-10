@@ -11,7 +11,7 @@ export const darkTheme = createTheme({
     },
 
     primary: {
-      main: "#4F8CFF",        // calm “product” blue
+      main: "#cacaca",        // calm “product” blue
       contrastText: "#0B0F17",
     },
     secondary: {
