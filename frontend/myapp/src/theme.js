@@ -66,22 +66,40 @@ export const darkTheme = createTheme({
 
   components: {
     MuiCssBaseline: {
-      styleOverrides: {
+      styleOverrides: (theme) => ({
         body: {
           backgroundColor: "#0B0F17",
         },
-      },
+        ":root": {
+          "--autofill-bg": theme.palette.background.default,
+        },
+
+        /* Autofill (Chrome/Edge) - generic */
+        "input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill": {
+          WebkitBoxShadow: "0 0 0 1000px var(--autofill-bg) inset !important",
+          boxShadow: "0 0 0 1000px var(--autofill-bg) inset !important",
+          WebkitTextFillColor: `${theme.palette.text.primary} !important`,
+          caretColor: `${theme.palette.text.primary} !important`,
+          transition: "background-color 9999s ease-out 0s",
+        },
+
+        /* Autofill (Chrome/Edge) - MUI specificity */
+        ".MuiInputBase-input:-webkit-autofill": {
+          WebkitBoxShadow: "0 0 0 1000px var(--autofill-bg) inset !important",
+          boxShadow: "0 0 0 1000px var(--autofill-bg) inset !important",
+          WebkitTextFillColor: `${theme.palette.text.primary} !important`,
+          caretColor: `${theme.palette.text.primary} !important`,
+        },
+
+        ".MuiInputBase-input:-webkit-autofill:focus": {
+          WebkitBoxShadow: "0 0 0 1000px var(--autofill-bg) inset !important",
+          boxShadow: "0 0 0 1000px var(--autofill-bg) inset !important",
+        },
+      }),
     },
 
-    MuiPaper: {
-      styleOverrides: {
-        root: ({ theme }) => ({
-          backgroundImage: "none",
-          border: `1px solid ${alpha("#FFFFFF", 0.08)}`,
-          boxShadow: `0 10px 30px ${alpha("#000000", 0.35)}`,
-        }),
-      },
-    },
+
+
 
     MuiCard: {
       styleOverrides: {
