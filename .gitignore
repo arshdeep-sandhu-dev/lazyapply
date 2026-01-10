@@ -1,0 +1,40 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# Build outputs
+build/
+dist/
+coverage/
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+.venv/
+.python-version
+.pytest_cache/
+
+# Misc
+*.sqlite3
+*.sqlite
