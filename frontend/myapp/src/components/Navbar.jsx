@@ -6,6 +6,7 @@ import { useAuth } from '../context/auth/AuthState';
 import { doSignOut } from "../firebase/auth";
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { useNavigate } from 'react-router-dom';
+import { FILEPATHS } from '../constants/Header';
 const linkStyle = ({ isActive }) => ({
   textTransform: 'none',
   fontWeight: 700,
@@ -31,8 +32,10 @@ export default function Navbar() {
           </Box>
 
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1, flex: 1 }}>
-            <Button component={NavLink} to="/" sx={linkStyle}>Home</Button>
-
+            {FILEPATHS.map((item) => (
+              <Button component={NavLink} to={item.pathing} sx={linkStyle}>{item.name}</Button>
+            ))}
+            
 
           </Box>
 

@@ -3,12 +3,13 @@ import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { Typography } from '@mui/material';
 export default function HomeContainer() {
-  
+
   return (
     <Container maxWidth="lg" sx={{ pt: 7 }}>
       <Grid container spacing={3} justifyContent="center" alignItems="center" style={{ minHeight: '80vh' }}>
         <Typography variant='h1' >Welcome to the Home Page</Typography>
       </Grid>
+      
     </Container>
   );
 }
