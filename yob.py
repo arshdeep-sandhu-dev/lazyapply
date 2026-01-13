@@ -1,6 +1,7 @@
 #from typing import Union, Optional
 import uvicorn
 from fastapi import FastAPI, Query, APIRouter
+from fastapi.middleware.cors import CORSMiddleware
 from yob_scraper import read_yob_file, save_to_file
 import csv
 #from pydantic import BaseModel
@@ -43,6 +44,18 @@ def get_csv(
     return {"message": "Created filtered csv with " + str(len(yob_data)) + " rows", "yob_data": yob_data}
 
 app.include_router(router)
+
+origins = [
+    "http://localhost:3000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,        # or ["*"] for quick dev
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Example usage:
 # yob_data = read_yob_file('yob_data.csv')
